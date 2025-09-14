@@ -1,51 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="calculator">
+
+<body class=" p-0 m-0">
+    <div class="w-full h-screen bg-[#c6d5da] flex justify-center items-center">
+        <div class="calculator bg-[#a71229] p-[20px] rounded-[10px]">
             <form>
-                <div class="display">
-                <input type="text" name="display">
+                <div class="display flex justify-end my-5">
+                    <input type="text" name="display"
+                        class="text-right flex-1 text-[45px] shadow-none text-white bg-transparent border rounded-[10px] w-[20px]">
                 </div>
                 <div>
-                    <input type="button" value="AC" onclick = "display.value = '' " class="operator">
-                    <input type="button" value="DE" onclick = "display.value = display.value.toString().slice(0,-1)" class="operator">
-                    <input type="button" value="." onclick = "display.value += '.' " class="operator">
-                    <input type="button" value="/" onclick = "display.value += '/' " class="operator">
+                    <input type="button" value="AC"
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value = ' ' ">
+                    <input type="button" value="DE"
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="."
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value += '.' ">
+                    <input type="button" value="/"
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value += '/' ">
                 </div>
                 <div>
-                    <input type="button" value="7" onclick = "display.value += '7' ">
-                    <input type="button" value="8" onclick = "display.value += '8' ">
-                    <input type="button" value="9" onclick = "display.value += '9' ">
-                    <input type="button" value="*" onclick = "display.value += '*' " class="operator">
+                    <input type="button" value="7"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '7'">
+                    <input type="button" value="8"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '8'">
+                    <input type="button" value="9"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '9'">
+                    <input type="button" value="*"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value += '*'">
                 </div>
                 <div>
-                    <input type="button" value="4" onclick = "display.value += '4' ">
-                    <input type="button" value="5" onclick = "display.value += '5' ">
-                    <input type="button" value="6" onclick = "display.value += '6' ">
-                    <input type="button" value="-" onclick = "display.value += '-' " class="operator">
+                    <input type="button" value="4"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '4'">
+                    <input type="button" value="5"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '5'">
+                    <input type="button" value="6"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '6'">
+                    <input type="button" value="-"
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value += '-'">
                 </div>
                 <div>
-                    <input type="button" value="1" onclick = "display.value += '1' ">
-                    <input type="button" value="2" onclick = "display.value += '2' ">
-                    <input type="button" value="3" onclick = "display.value += '3' ">
-                    <input type="button" value="+" onclick = "display.value += '+' " class="operator">
+                    <input type="button" value="1"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '1'">
+                    <input type="button" value="2"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '2'">
+                    <input type="button" value="3"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '3'">
+                    <input type="button" value="+"
+                        class="operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value += '+'">
                 </div>
                 <div>
-                    <input type="button" value="00" onclick = "display.value += '00' ">
-                    <input type="button" value="0" onclick = "display.value += '0' ">
-                    <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)" >
+                    <input type="button" value="00"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '00'">
+                    <input type="button" value="0"
+                        class="border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[60px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)] bg-transparent text-xl"
+                        onclick="display.value += '0' ">
+                    <input type="button" value="="
+                        class="equal operator border text-white cursor-pointer m-[10px] h-[60px] rounded-[10px] outline-0 w-[145px] shadow-[-8px_-8px_15px_rgba(255,255,255,0.1),_5px_5px_15px_rgba(0,0,0,0.2)]  bg-black text-xl"
+                        onclick="display.value = eval(display.value)">
                 </div>
             </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
+
 </html>

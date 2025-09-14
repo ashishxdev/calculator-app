@@ -1,6 +1,6 @@
 # 🧮 Calculator App
 
-A simple and stylish calculator built with **HTML, CSS, and JavaScript**.  
+A simple and stylish calculator built with **HTML, TailwindCSS, and JavaScript**.  
 Perform basic arithmetic operations with a clean UI and responsive design.
 
 ## 🚀 Features
@@ -11,5 +11,5 @@ Perform basic arithmetic operations with a clean UI and responsive design.
 
 ## 🛠️ Tech Stack
 - HTML5
-- CSS3
+- TailwindCss
 - JavaScript
